@@ -21,6 +21,8 @@ for row, col in np.ndindex(ma_mat.shape):
 ma_list = [_ for _ in range(10)]
 print(ma_list[9:0])
 
+print(len)
+
 # cell_zeros = np.zeros((6,6))
 
 
