@@ -12,6 +12,9 @@ import numpy as np
 
 color_bg = (10, 10, 10)
 color_grid = (40, 40, 40)
+# color_die_next = (170, 170, 170)
+color_alive_next = (42, 72, 88) # when stop and drawing
+# color_alive_next_list=[(250, 250, 110), (196, 236, 116), (146, 220, 126), (100, 201, 135), (57, 180, 142)]
 color_alive_next_list = [(250, 250, 110), (156, 223, 124), (74, 189, 140), (0, 150, 142), (16, 110, 124)]
 
 # # new
@@ -135,10 +138,13 @@ def color_updator(row, col, color_recorder, update_color=True):
 
 def main():
     size_whole = 50
-    grid_row, grid_col = 12, 16
     pygame.init()
-    screen = pygame.display.set_mode((grid_col*size_whole, grid_row*size_whole))
+    screen = pygame.display.set_mode((800, 600))
 
+    # new
+    grid_row, grid_col = 12, 16
+
+    # new
     color_recorder = np.zeros((grid_row, grid_col))
 
     cells = np.zeros((grid_row, grid_col))
